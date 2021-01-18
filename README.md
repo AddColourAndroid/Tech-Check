@@ -15,11 +15,11 @@ Busy fruit shop App Android App (Kotlin/Java)
  - <p><strong><a href="https://github.com/mphocharlienkuna/Tech-Check/blob/master/APK/app-debug.apk?raw=true">Apk</a></strong></p>
 Screenshots
 -----------
- - <p><strong><a href="https://github.com/mphocharlienkuna/Tech-Check/tree/master/Screenshots/">Screens</a></strong></p>
-![Loading Screen](screenshots/loading.jpeg "Loading Screen")
-![Home Screen](screenshots/home.jpeg "Home Screen")
-![Add Screen](screenshots/add.jpeg "Add Screen")
-![Cart Screen](screenshots/cart.jpeg "Cart Screen")
-![History Screen](screenshots/history.jpeg "History Screen")
-![Share Screen](screenshots/share.jpeg "Share Screen")
-![Scan Screen](screenshots/scan.jpeg "Scan Screen")
+ - <p><strong><a href="https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/">Screens</a></strong></p>
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/loading.jpeg?raw=true "Loading Screen")
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/home.jpeg?raw=true "Home Screen")
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/add.jpeg?raw=true "Add Screen")
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/cart.jpeg?raw=true "Cart Screen")
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/history.jpeg?raw=true "History Screen")
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/share.jpeg?raw=true "Share Screen")
+![Alt text](https://github.com/mphocharlienkuna/Tech-Check/blob/master/Screenshots/scan.jpeg?raw=true "Scan Screen")

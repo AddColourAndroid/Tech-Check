@@ -17,3 +17,9 @@ Screenshots
 -----------
  - <p><strong><a href="https://github.com/mphocharlienkuna/Tech-Check/tree/master/Screenshots/">Screens</a></strong></p>
 ![Loading Screen](screenshots/loading.jpeg "Loading Screen")
+![Home Screen](screenshots/home.jpeg "Home Screen")
+![Add Screen](screenshots/add.jpeg "Add Screen")
+![Cart Screen](screenshots/cart.jpeg "Cart Screen")
+![History Screen](screenshots/history.jpeg "History Screen")
+![Share Screen](screenshots/share.jpeg "Share Screen")
+![Scan Screen](screenshots/scan.jpeg "Scan Screen")

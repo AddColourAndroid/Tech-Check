@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.ikhokha.techcheck.db.model.Products" />
+
+        <variable
+            name="callback"
+            type="com.ikhokha.techcheck.ui.callback.HomeCallback" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row_item_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_2"
+        android:background="@color/windowBackground"
+        android:onClick="@{() ->  callback.onClick(data)}"
+        android:paddingBottom="@dimen/margin_5">
+
+        <ImageView
+            android:id="@+id/image_view_product"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100"
+            android:layout_margin="@dimen/margin_5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:background="@drawable/gradient_button_default"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLines="1"
+            android:padding="@dimen/margin_10"
+            android:text="@{data.description}"
+            android:textColor="@color/windowBackground"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_product" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

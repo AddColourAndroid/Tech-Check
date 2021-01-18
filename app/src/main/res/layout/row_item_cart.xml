@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.ikhokha.techcheck.db.model.ShoppingCart" />
+
+        <variable
+            name="callback"
+            type="com.ikhokha.techcheck.ui.callback.ShoppingCartCallback" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layout_row_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/windowBackground">
+
+        <RelativeLayout
+            android:id="@+id/layout_item_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_16">
+
+            <ImageView
+                android:id="@+id/image_view_product"
+                android:layout_width="@dimen/margin_100"
+                android:layout_height="@dimen/margin_144"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/shopping_cart" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0.5dp"
+                android:layout_height="@dimen/width_96"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_16"
+                android:layout_toEndOf="@+id/image_view_product"
+                android:background="@color/colorPrimary" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_product_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/divider">
+
+                <TextView
+                    android:id="@+id/text_view_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:maxLines="1"
+                    android:text="@{data.description}"
+                    android:textColor="@color/colorDefaultText"
+                    android:textSize="@dimen/text_view_size_18"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_view_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:maxLines="1"
+                    android:text="@{`R ` + data.price}"
+                    android:textColor="@color/colorReadText"
+                    android:textSize="@dimen/text_view_size_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_description" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_price">
+
+                    <ImageView
+                        android:id="@+id/image_view_delete"
+                        android:layout_width="@dimen/margin_32"
+                        android:layout_height="@dimen/margin_32"
+                        android:onClick="@{() ->  callback.onClick(data, 3)}"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_button_default"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/image_view_decrement"
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:contentDescription="@string/back_button"
+                            android:onClick="@{() ->  callback.onClick(data, 2)}"
+                            android:src="@drawable/ic_remove"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_marginTop="@dimen/margin_1"
+                            android:layout_marginBottom="@dimen/margin_1"
+                            android:background="@drawable/gradient_dark_default"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:maxLines="1"
+                            android:padding="@dimen/margin_10"
+                            android:text="@{String.valueOf(data.quantity)}"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_view_size_18"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/image_view_decrement"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/image_view_increment"
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:contentDescription="@string/back_button"
+                            android:onClick="@{() ->  callback.onClick(data, 1)}"
+                            android:src="@drawable/ic_add"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_quantity"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/layout_item_row"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:background="@color/colorPrimary" />
+    </RelativeLayout>
+</layout>

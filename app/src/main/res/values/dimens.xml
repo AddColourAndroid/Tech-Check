@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- DEFAULT IMAGE HEIGHT -->
+    <dimen name="image_view">24dp</dimen>
+
+    <!-- MARGIN -->
+    <dimen name="margin_0">0dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_54">54dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_144">144dp</dimen>
+
+    <!-- TEXT VIEW SIZE -->
+    <dimen name="text_view_size_14">14sp</dimen>
+    <dimen name="text_view_size_18">18sp</dimen>
+
+    <!-- SPLASH SCREEN HEIGHTS -->
+    <dimen name="width_96">96dp</dimen>
+</resources>
